@@ -109,6 +109,10 @@ confusionMatrix(test_clean$classe, predict_rf)
 ```
 
 The accuracy is 0.9999, with error of 0.0001 so it beats decision trees. So we will use this method as our final model. 
+Then do predictions 
 
+```{r}
+predictions <- predict(model_rf, test_clean, type = "raw")
+head(predictions, 20)
 ```
 
